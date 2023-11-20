@@ -14,6 +14,7 @@ halfcaster(paladin).
 halfcaster(ranger).
 
 nature(druid).
+nature(ranger).
 
 religionbased(cleric).
 religionbased(druid).
