@@ -69,3 +69,6 @@ d10(paladin).
 d10(ranger).
 
 d12(barbarian).
+
+
+This is a change
