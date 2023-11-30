@@ -71,5 +71,24 @@ d10(ranger).
 
 d12(barbarian).
 
+collect_answer:-
+    question(Quest,Answer),		% output question to user
+	write(Quest),nl,
+	getyesno(Yesno),nl,
+	(Yesno='yes';Yesno='y'),			% if user has symptom put into working memory
+	assertz(quiz(Answer)),
+	(Yesno='no';Yesno='n'),				% if user doesn't have symptom 
+	retract(quiz(Answer)),  			% remove from working memory 
+	fail.
 
-This is a change
+collect_answer.
+question('Would you like to be a magic class?', magic)
+question('Would you like to be nature based?', nature)
+question('Would you like to be a melee class?', melee)
+question('Would you like to be religion based?', religion)
+question('Would you like to be sneaky?', sneaky)
+question('Would you like to have the charisma trait?', charisma)
+question('Would you like to be angry?', angry)
+question('Would you like to fight with hands?', hands)
+question('Would you like to have a d8 hit dice?', dice)
+question('Would you like to have 2 high-level spell slots?', slots)
